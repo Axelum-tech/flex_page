@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     
     <title>Flex content</title>
 </head>
@@ -25,7 +26,7 @@
                 <h2>Main article</h2>
                     <figure>
                         <picture>
-                            <a id="first_a" href="#large_img1"><source srcset="/img/img1_small.jpg"
+                            <a id="first_a" href="#lightbox1"><source srcset="/img/img1_small.jpg"
                                 media="(max-width: 800px)">
                             
                             <img src="/img/img1.jpg" alt="">
@@ -45,7 +46,7 @@
             <article>
                 <h3>News title 2</h3>
                 <figure>
-                    <a href="#large_img2">
+                    <a href="#lightbox2">
                         <img src="/img/img2.jpg" alt="">
                     </a>
                 </figure>
@@ -59,7 +60,7 @@
             <article>
                 <h3>News title 3</h3>
                 <figure>
-                    <a href="#large_img3"><img src="/img/img3.jpg" alt=""></a>
+                    <a href="#lightbox3"><img src="/img/img3.jpg" alt=""></a>
                 </figure>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur dolor ea nesciunt reiciendis labore voluptates neque, cupiditate quis quos voluptate ullam provident officia accusamus adipisci in consequatur sunt voluptas eligendi natus laboriosam corrupti qui dolorem ipsum cum. Quia distinctio voluptatem officia fugiat aliquid minus velit sunt.</p>
                     <p class="read_more">Quam in veritatis impedit aliquam nihil asperiores eos aperiam, vero magnam cumque sint praesentium nulla porro mollitia tenetur quibusdam. Illo, doloribus rerum libero est odio qui officiis corporis nihil ea, error laboriosam ab sunt dolorem, accusamus optio minus fugiat vel? Quidem explicabo repudiandae quod iusto provident?</p>
@@ -69,22 +70,57 @@
             </article>
         </div>
 
-        <picture class="large_img">       
-            <div id="large_img1">
-                <img src="img\img1.jpg" alt="">
-                <a href="#news">X</a>
-            </div>
-           
-            <div id="large_img2">
-                <img src="img\img2_large.jpg" alt="">
-                <a href="#news">X</a>
-            </div>
+        <div class="lightbox" id="lightbox1"> 
+            <div class="lightbox_bg1">
+                <div class="large_img1" id="large_img1">
+                    <img src="img\img1.jpg" alt=""> 
+                    <a href="#news"><i class="fas fa-times"></i></a>
+                </div>
+                
+                    <div class="right">
+                        <a  href="#lightbox2"><i class="fas fa-arrow-right"></i></a>
+                    </div>
 
-            <div id="large_img3">
-                <img src="img\img3_large.jpg" alt="">
-                <a href="#news">X</a>
+                    <div class="left">
+                        <a  href="#lightbox3"><i class="fas fa-arrow-left"></i></a>
+                    </div>
+               
             </div>
-        </picture>
+        </div>
+            
+        <div class="lightbox" id="lightbox2"> 
+            <div class="lightbox_bg2">
+                <div class="large_img2">
+                    <img src="img\img2_large.jpg" alt=""> 
+                    <a href="#news"><i class="fas fa-times"></i></a>
+                </div>
+                <div class="right">
+                    <a  href="#lightbox3"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="left">
+                    <a  href="#lightbox1"><i class="fas fa-arrow-left"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="lightbox" id="lightbox3">
+            <div class="lightbox_bg3">         
+                <div class="large_img3">
+                    <img src="img\img3_large.jpg" alt=""> 
+                    <a href="#news"><i class="fas fa-times"></i></a>
+                </div>
+                <div class="right">
+                    <a  href="#lightbox1"><i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="left">
+                    <a  href="#lightbox2"><i class="fas fa-arrow-left"></i></a>
+                </div>
+                
+            </div>
+        </div>
+        
 
        
     </section>
